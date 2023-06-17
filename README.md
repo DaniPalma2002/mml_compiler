@@ -11,3 +11,19 @@ The steps to develop a full MML compiler imply the adaptation of:
 * the Postfix writer (for the final delivery: `targets/postfix_writer.cpp`)
 
 Note that not all the code has to be working for all deliveries. Check the evaluation conditions on the course pages.
+
+## Steps to run .mml program
+- Make sure to have `RTS` and `CDK` installed (https://web.tecnico.ulisboa.pt/~david.matos/w/pt/index.php/Compiladores/Projecto_de_Compiladores -> Material de Uso Obrigatório)
+```bash
+make
+```
+```bash
+./mml <file>.mml
+```
+```bash
+yasm -felf32 <file>.asm
+```
+```bash
+ld -m elf_i386 -o ex1 ex1.o -lrts
+```
+FAQ -> https://web.tecnico.ulisboa.pt/~david.matos/w/pt/index.php/Compiladores/Projecto_de_Compiladores/Perguntas_e_Respostas_sobre_o_Desenvolvimento_(FAQ)
