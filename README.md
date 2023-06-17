@@ -24,6 +24,10 @@ make
 yasm -felf32 <file>.asm
 ```
 ```bash
-ld -m elf_i386 -o ex1 ex1.o -lrts
+ld -m elf_i386 -o <file> <file>.o -lrts
+```
+### Run auto-tests
+```bash
+./daily-tests.sh
 ```
 FAQ -> https://web.tecnico.ulisboa.pt/~david.matos/w/pt/index.php/Compiladores/Projecto_de_Compiladores/Perguntas_e_Respostas_sobre_o_Desenvolvimento_(FAQ)
