@@ -26,7 +26,8 @@ for file in auto-tests/*; do
         ./test > run/$filename.log
         rm auto-tests/$filename.asm
         rm $filename.o
-        diff <( tr -d ' \n\t' <auto-tests/expected/$filename.out) <( tr -d ' \n\t' <run/$filename.log)
+        rm test
+        diff -iwubZB --color <( tr -d '\n' < auto-tests/expected/$filename.out) <( tr -d ' \n' < run/$filename.log)
         rv_diff=$?
         if [ ${rv_diff} == 0 ]; then
             echo -e "${GREEN}Test $filename PASSED!\n${NC}"

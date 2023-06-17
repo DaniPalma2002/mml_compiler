@@ -1,0 +1,6 @@
+*.o
+*.tab.*
+mml_scanner.cpp
+.auto/*
+mml_parser.output
+mml
